@@ -170,8 +170,8 @@ export default function Main() {
   const formAdd = useForm<z.infer<typeof formSchemaAdd>>({
     resolver: zodResolver(formSchemaAdd),
     defaultValues: {
-      tokenA: "",
-      tokenB: "",
+      tokenA: 0,
+      tokenB: 0,
     },
   });
 
@@ -196,7 +196,7 @@ export default function Main() {
   const formSwap = useForm<z.infer<typeof formSchemaSwap>>({
     resolver: zodResolver(formSchemaSwap),
     defaultValues: {
-      amount: "",
+      amount: 0,
       isTokenA: "true",
     },
   });
